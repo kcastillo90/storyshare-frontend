@@ -33,7 +33,7 @@ export class SingleStoryComponent implements OnInit {
       this.id = params["id"]
       // find post from the service with the selected story
       const story = this.stysrv.stories.find((s) => s.id == params.id)
-      // if post exists assign it to post property
+      // if post exists assign it to story property
       if (story) {
         this.story = story
       }

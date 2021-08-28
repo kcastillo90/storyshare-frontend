@@ -47,7 +47,13 @@ export class StoryFormComponent implements OnInit {
         author: this.author,
         story: this.story
       })
-    }
+    } else
+    // create the story with the form data
+    this.stysrv.createStory({
+      title: this.title,
+      author: this.author,
+      story: this.story
+    })
     // send back to main page
     this.router.navigate(["/"])
   }
