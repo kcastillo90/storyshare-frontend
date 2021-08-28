@@ -1,0 +1,10 @@
+<div>
+  <h1>{{ story.title }}</h1>
+  <h2>{{ story.author }}</h2>
+  <h3>{{ story.story }}</h3>
+  <a routerLink="/"><button>BACK</button></a>
+
+  <a [routerLink]="'/edit/' + story.id"><button>Edit Story</button></a>
+
+  <button (click)="deleteStory()">Delete Story</button>
+</div>

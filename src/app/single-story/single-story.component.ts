@@ -1,0 +1,49 @@
+import { Component, OnInit } from '@angular/core'
+import { Router, ActivatedRoute, ParamMap } from "@angular/router"
+import { StoryShareService } from '../story-share.service'
+import { Story } from '../../types'
+
+@Component({
+  selector: 'app-single-story',
+  templateUrl: './single-story.component.html',
+  styleUrls: ['./single-story.component.css']
+})
+export class SingleStoryComponent implements OnInit {
+  id: number | null = null  // var for param id
+  route                     // var for route service
+  stysrv                    // var for story service
+  story: Story = {          // obj to hold selected story
+    title: "",
+    author: "",
+    story: ""
+  }
+  router: Router            // var to hold router service
+
+  constructor(route: ActivatedRoute, storyShareService: StoryShareService, router: Router) {
+    // assigns services to properties
+    this.route = route
+    this.stysrv = storyShareService
+    this.router = router    // var for story service
+  }
+
+  ngOnInit(): void {
+    // get the URL Param
+    this.route.params.subscribe((params) => {
+      // store the id in the properties
+      this.id = params["id"]
+      // find post from the service with the selected story
+      const story = this.stysrv.stories.find((s) => s.id == params.id)
+      // if post exists assign it to post property
+      if (story) {
+        this.story = story
+      }
+    })
+  }
+
+  // function to delete a story
+  async deleteStory() {
+    await this.stysrv.DeleteStory(this.story)
+    this.router.navigate(["/"])
+  }
+
+}

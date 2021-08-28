@@ -1,0 +1,4 @@
+<div *ngFor="let story of stysrv.stories; index as i">
+  <a [routerLink]="'/story/' + story.id"><h1>{{ story.title }}</h1></a>
+  <h2>{{ story.author }}</h2>
+</div>
