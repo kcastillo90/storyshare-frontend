@@ -1,5 +1,5 @@
 export type Story = {
-  id?: number
+  _id?: number
   title: string
   author: string
   story: string

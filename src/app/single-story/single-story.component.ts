@@ -9,7 +9,7 @@ import { Story } from '../../types'
   styleUrls: ['./single-story.component.css']
 })
 export class SingleStoryComponent implements OnInit {
-  id: number | null = null  // var for param id
+  _id: number | null = null  // var for param _id
   route                     // var for route service
   stysrv                    // var for story service
   story: Story = {          // obj to hold selected story
@@ -29,10 +29,10 @@ export class SingleStoryComponent implements OnInit {
   ngOnInit(): void {
     // get the URL Param
     this.route.params.subscribe((params) => {
-      // store the id in the properties
-      this.id = params["id"]
+      // store the _id in the properties
+      this._id = params["_id"]
       // find post from the service with the selected story
-      const story = this.stysrv.stories.find((s) => s.id == params.id)
+      const story = this.stysrv.stories.find((s) => s._id == params._id)
       // if post exists assign it to story property
       if (story) {
         this.story = story

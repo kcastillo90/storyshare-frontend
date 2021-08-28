@@ -4,7 +4,7 @@
   <h3>{{ story.story }}</h3>
   <a routerLink="/"><button>BACK</button></a>
 
-  <a [routerLink]="'/edit/' + story.id"><button>Edit Story</button></a>
+  <a [routerLink]="'/edit/' + story._id"><button>Edit Story</button></a>
 
   <button (click)="deleteStory()">Delete Story</button>
 </div>

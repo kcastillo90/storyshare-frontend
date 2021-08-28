@@ -35,7 +35,7 @@ export class StoryShareService {
 
   // method to update stories
   async updateStory(story: Story) {
-    await fetch(this.url + story.id + "/", {
+    await fetch(this.url + story._id + "/", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -47,7 +47,7 @@ export class StoryShareService {
 
   // method to delete stories
   async DeleteStory(story: Story) {
-    await fetch(this.url + story.id + "/", {
+    await fetch(this.url + story._id + "/", {
       method: "delete",
     })
     return this.getStories()
