@@ -32,23 +32,25 @@ export class StoryFormComponent implements OnInit {
         this.author = story.author
         this.story = story.story
         this._id = story._id
-        this.buttonLabel = "Edit Story"
+        this.buttonLabel = "Submit Edits"
       }
     })
   }
 
   async handleSubmit() {
-    console.log("test")
     // if there is an _id, edit the story, if not, create a new story:
     if(this._id) {
       //  update the story with the form data
+      console.log(this._id)
       this.stysrv.updateStory({
+        _id: this._id,
         title: this.title,
         author: this.author,
         story: this.story
       })
     } else {
     // create the story with the form data
+    console.log("posting new story")
     this.stysrv.createStory({
       title: this.title,
       author: this.author,

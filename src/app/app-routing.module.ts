@@ -6,9 +6,9 @@ import { StoryFormComponent } from './story-form/story-form.component'
 
 
 const routes: Routes = [
-  { path: "story/:id", component: SingleStoryComponent },
+  { path: "story/:_id", component: SingleStoryComponent },
   { path: "new", component: StoryFormComponent },
-  { path: "edit/:id", component: StoryFormComponent },
+  { path: "edit/:_id", component: StoryFormComponent },
   { path: "", component: AllStoriesComponent },
 ]
 

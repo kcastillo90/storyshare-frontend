@@ -35,7 +35,7 @@ export class StoryShareService {
 
   // method to update stories
   async updateStory(story: Story) {
-    await fetch(this.url + story._id + "/", {
+    await fetch(this.url + story._id, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -52,8 +52,5 @@ export class StoryShareService {
     })
     return this.getStories()
   }
-
-
-
 
 }
