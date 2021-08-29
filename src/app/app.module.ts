@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { AllStoriesComponent } from './all-stories/all-stories.component'
 import { SingleStoryComponent } from './single-story/single-story.component'
-import { StoryFormComponent } from './story-form/story-form.component'
+import { StoryFormComponent } from './story-form/story-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StoryFormComponent } from './story-form/story-form.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

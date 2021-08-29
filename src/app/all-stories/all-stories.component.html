@@ -1,4 +1,8 @@
-<div *ngFor="let story of stysrv.stories; index as i">
+<header class="main-page-hdr">
+  <h1>Stories List</h1>
+  <a routerLink="/new"><button class="publish-btn">Publish a new story!</button></a>
+</header>
+<div class="story-div" *ngFor="let story of stysrv.stories; index as i">
   <a [routerLink]="'/story/' + story._id"><h1>{{ story.title }}</h1></a>
-  <h2>{{ story.author }}</h2>
+  <h2>By: {{ story.author }}</h2>
 </div>
