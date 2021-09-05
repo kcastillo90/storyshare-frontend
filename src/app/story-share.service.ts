@@ -6,7 +6,8 @@ import { Story } from "../types"
 })
 export class StoryShareService {
   // url of Story Share API
-  url = "http://localhost:3000/stories/"
+  // url = "http://localhost:3000/stories/"
+  url = "https://storyshare-backend.herokuapp.com/"
   stories: Array<Story> = []
 
   // get stories when service is constructed

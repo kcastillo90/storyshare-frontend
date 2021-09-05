@@ -1,7 +1,7 @@
-<div>
+<div class="single-story">
   <h1>{{ story.title }}</h1>
   <h2>{{ story.author }}</h2>
-  <h3>{{ story.story }}</h3>
+  <p class="story">{{ story.story }}</p>
   <a routerLink="/"><button>Back</button></a>
 
   <a [routerLink]="'/edit/' + story._id"><button>Edit Story</button></a>
