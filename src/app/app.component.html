@@ -3,6 +3,8 @@
   Log in
 </button>
 
+<h1 *ngIf="(auth.isAuthenticated$ | async) === false">Please login to contribute</h1>
+
 <button *ngIf="auth.isAuthenticated$ | async" (click)="logout()">
   Log out
 </button>
@@ -10,4 +12,4 @@
 <div *ngIf="auth.user$ | async as user">
   <p>Welcome {{ user.name }}!</p>
 </div>
-<router-outlet></router-outlet>
+<router-outlet *ngIf="auth.user$ | async as user"></router-outlet>
