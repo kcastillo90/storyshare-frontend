@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { Router, ActivatedRoute, ParamMap } from "@angular/router"
 import { StoryShareService } from '../story-share.service'
 import { Story } from '../../types'
+import { AuthService } from '@auth0/auth0-angular'
 
 @Component({
   selector: 'app-single-story',
@@ -15,11 +16,12 @@ export class SingleStoryComponent implements OnInit {
   story: Story = {          // obj to hold selected story
     title: "",
     author: "",
+    synopsis: "",
     story: ""
   }
   router: Router            // var to hold router service
 
-  constructor(route: ActivatedRoute, storyShareService: StoryShareService, router: Router) {
+  constructor(route: ActivatedRoute, storyShareService: StoryShareService, router: Router, public auth: AuthService) {
     // assigns services to properties
     this.route = route
     this.stysrv = storyShareService

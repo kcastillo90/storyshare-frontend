@@ -3,6 +3,8 @@
   <input type="text" name="title" placeholder="Title" [(ngModel)]="title" />
   <label for="author">Author: </label>
   <input type="text" name="author" placeholder="Author" [(ngModel)]="author" />
+  <label for="synopsis">Synopsis: </label>
+  <textarea name="synopsis" placeholder="One sentence synopsis here..." [(ngModel)]="synopsis"></textarea>
   <textarea name="story" rows="25" cols="100" placeholder="Your story here..." [(ngModel)]="story"></textarea>
   <button (click)="handleSubmit()">{{buttonLabel}}</button>
 </div>

@@ -1,10 +1,11 @@
 <div class="single-story">
   <h1>{{ story.title }}</h1>
   <h2>{{ story.author }}</h2>
+  <h4>{{ story.synopsis }}</h4>
   <p class="story">{{ story.story }}</p>
   <a routerLink="/"><button>Back</button></a>
 
-  <a [routerLink]="'/edit/' + story._id"><button>Edit Story</button></a>
+  <a [routerLink]="'/edit/' + story._id" *ngIf="auth.user$ | async as user"><button>Edit Story</button></a>
 
-  <button (click)="deleteStory()">Delete Story</button>
+  <button (click)="deleteStory()" *ngIf="auth.user$ | async as user">Delete Story</button>
 </div>
