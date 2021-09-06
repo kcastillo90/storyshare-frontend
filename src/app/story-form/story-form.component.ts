@@ -10,6 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router'
 export class StoryFormComponent implements OnInit {
   title: string = ""                       // var for title form field
   author: string = ""                      // var for author form field
+  synopsis: string = ""                    // var for synopsis form field
   story: string = ""                       // var for story form field
   stysrv: StoryShareService                // var for story service
   route: ActivatedRoute                    // var for route service
@@ -30,6 +31,7 @@ export class StoryFormComponent implements OnInit {
       if(story) {
         this.title = story.title
         this.author = story.author
+        this.synopsis = story.synopsis
         this.story = story.story
         this._id = story._id
         this.buttonLabel = "Submit Edits"
@@ -46,6 +48,7 @@ export class StoryFormComponent implements OnInit {
         _id: this._id,
         title: this.title,
         author: this.author,
+        synopsis: this.synopsis,
         story: this.story
       })
     } else {
@@ -54,6 +57,7 @@ export class StoryFormComponent implements OnInit {
     this.stysrv.createStory({
       title: this.title,
       author: this.author,
+      synopsis: this.synopsis,
       story: this.story
     })
     }
