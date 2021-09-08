@@ -192,6 +192,22 @@ input {
   background: crimson;
 }
 
+.links {
+  margin-top: 3vh;
+}
+
+#github_logo {
+  color: whitesmoke;
+  font-size: 50px;
+  margin: 25px;
+}
+
+#linkedin_logo {
+  color: whitesmoke;
+  font-size: 50px;
+  margin: 25px;
+}
+
 @media (min-width: 750px) {
   .header-container {
     width: 40%;
