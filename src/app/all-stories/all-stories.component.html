@@ -1,8 +1,16 @@
-<header class="main-page-hdr">
-  <h1>Stories List</h1>
+<div class="main-page-hdr">
+  <h1 id="contents-table">Table of Contents</h1>
   <a routerLink="/new"><button class="publish-btn" *ngIf="auth.user$ | async as user">Publish a new story!</button></a>
-</header>
-<div class="story-div" *ngFor="let story of stysrv.stories; index as i">
-  <a [routerLink]="'/story/' + story._id"><h1>{{ story.title }}</h1></a>
-  <h2>By: {{ story.author }}</h2>
+</div>
+<div id="stories-div">
+  <div *ngFor="let story of stysrv.stories; index as i">
+    <a [routerLink]="'/story/' + story._id">
+      <div class="story-div">
+        <h1 class="story-title">{{ story.title }}</h1>
+        <h3 class="story-author">By: {{ story.author }}</h3>
+        <p class="synopsis">{{ story.synopsis }}</p>
+      </div>
+    </a>
+
+  </div>
 </div>
