@@ -1,9 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+app-root {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Baskerville;
+  background: #C0C0C0;
 }
 
 header {
@@ -11,8 +19,16 @@ header {
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  background: url("https://wallpaperaccess.com/full/1543392.png");
   border-bottom: 3px solid #2B9094;
-  width: 70%;
+  width: 100%;
+}
+
+.header-container {
+  width: 90%;
+  height: 100%;
+  background: rgb(0, 0, 0, 0.7);
+  color: whitesmoke;
 }
 
 .site-title {
@@ -29,6 +45,7 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin: 30px auto;
 }
 
 button {
@@ -51,6 +68,7 @@ a {
 
 #contents-table {
   margin: 5vh auto 3vh auto;
+  color: whitesmoke;
 }
 
 .publish-btn {
@@ -69,9 +87,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 450px;
+  height: 300px;
   border: 1px solid #123E40;
   margin: 10px;
+  background: whitesmoke;
 }
 
 .story-title {
@@ -93,4 +114,83 @@ a {
 .synopsis {
   text-align: center;
   margin: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.form-small-entry {
+  width: 90vw;
+}
+
+label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 100px;
+  text-align: center;
+}
+
+input {
+  display: inline-block;
+  float: left;
+  width: 350px;
+}
+
+.synopsis-input {
+  width: 350px;
+}
+
+.story-input {
+  width: 90vw;
+  height: 30vh;
+}
+
+label {
+  font-size:
+}
+
+@media (min-width: 750px) {
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Baskerville;
+    background: #8B4513;
+  }
+
+  .header-container {
+    width: 40%;
+    height: 100%;
+    background: rgb(0, 0, 0, 0.7);
+    color: whitesmoke;
+  }
+
+  .form {
+    background: #C0C0C0;
+    width: 850px;
+  }
+
+  .story-input {
+    width: 800px;
+    height: 2000px;
+  }
+
+  .form-small-entry {
+    width: 800px;
+  }
+
+  input {
+    display: inline-block;
+    float: left;
+    width: 700px;
+  }
+
+  .synopsis-input {
+    width: 700px;
+  }
 }
