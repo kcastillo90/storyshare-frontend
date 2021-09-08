@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* ====== HEADER ====== */
 app-root {
   width: 100vw;
   display: flex;
@@ -11,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: Baskerville;
-  background: #C0C0C0;
+  background: #8B4513;
 }
 
 header {
@@ -48,6 +50,8 @@ header {
   margin: 30px auto;
 }
 
+/* ====== MAIN PAGE ====== */
+
 button {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -59,6 +63,12 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border: 1px solid gray;
+}
+
+.back-btn {
+  background: #C0C0C0;
+  color: #000000;
 }
 
 a {
@@ -105,16 +115,12 @@ a {
   align-items: center;
 }
 
-.single-story {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .synopsis {
   text-align: center;
   margin: 5px;
 }
+
+/* ====== STORY FORM ====== */
 
 .form {
   display: flex;
@@ -125,6 +131,7 @@ a {
 
 .form-small-entry {
   width: 90vw;
+  margin: 10px auto;
 }
 
 label {
@@ -133,6 +140,7 @@ label {
   clear: left;
   width: 100px;
   text-align: center;
+  color: whitesmoke;
 }
 
 input {
@@ -150,19 +158,39 @@ input {
   height: 30vh;
 }
 
-label {
-  font-size:
+/* ====== SINGLE STORY ====== */
+
+.single-story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin: 10px;
+}
+
+.single-story-title {
+  font-size: 10vh;
+}
+
+.single-story-synopsis {
+  width: 450px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.story {
+  border: 1px solid gray;
+  padding: 5px;
+  margin: auto 5vw;
+  background-color: #FCF5E5;
+  color: #123E40;
+}
+
+.delete-btn {
+  background: crimson;
 }
 
 @media (min-width: 750px) {
-  body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Baskerville;
-    background: #8B4513;
-  }
-
   .header-container {
     width: 40%;
     height: 100%;
@@ -171,7 +199,7 @@ label {
   }
 
   .form {
-    background: #C0C0C0;
+    background: #FCF5E5;
     width: 850px;
   }
 
@@ -188,6 +216,15 @@ label {
     display: inline-block;
     float: left;
     width: 700px;
+  }
+
+  label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: center;
+    color: #123E40;
   }
 
   .synopsis-input {
