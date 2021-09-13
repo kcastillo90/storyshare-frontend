@@ -12,6 +12,7 @@ export class StoryFormComponent implements OnInit {
   author: string = ""                      // var for author form field
   synopsis: string = ""                    // var for synopsis form field
   story: string = ""                       // var for story form field
+  user: string = ""                        // var for username that created story
   stysrv: StoryShareService                // var for story service
   route: ActivatedRoute                    // var for route service
   _id: number | null | undefined = null     // var for edited story if editing
@@ -33,6 +34,7 @@ export class StoryFormComponent implements OnInit {
         this.author = story.author
         this.synopsis = story.synopsis
         this.story = story.story
+        this.user = story.user
         this._id = story._id
         this.buttonLabel = "Submit Edits"
       }
@@ -49,7 +51,8 @@ export class StoryFormComponent implements OnInit {
         title: this.title,
         author: this.author,
         synopsis: this.synopsis,
-        story: this.story
+        story: this.story,
+        user: this.user
       })
     } else {
     // create the story with the form data
@@ -58,7 +61,8 @@ export class StoryFormComponent implements OnInit {
       title: this.title,
       author: this.author,
       synopsis: this.synopsis,
-      story: this.story
+      story: this.story,
+      user: this.user
     })
     }
     // send back to main page

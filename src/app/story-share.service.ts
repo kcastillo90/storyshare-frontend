@@ -6,8 +6,8 @@ import { Story } from "../types"
 })
 export class StoryShareService {
   // url of Story Share API
-  // url = "http://localhost:3000/"
-  url = "https://storyshare-backend.herokuapp.com/"
+  // url = "https://storyshare-backend.herokuapp.com/" // MEAN stack
+  url = "https://storyshare-dotnet-backend.herokuapp.com/"  // Angular w/ .NET + PSQL
   stories: Array<Story> = []
 
   // get stories when service is constructed

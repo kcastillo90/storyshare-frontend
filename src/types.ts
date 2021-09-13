@@ -4,4 +4,5 @@ export type Story = {
   author: string
   synopsis: string
   story: string
+  user: string
 }
