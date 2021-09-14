@@ -17,7 +17,8 @@ export class SingleStoryComponent implements OnInit {
     title: "",
     author: "",
     synopsis: "",
-    story: ""
+    story: "",
+    user: ""
   }
   router: Router            // var to hold router service
 
