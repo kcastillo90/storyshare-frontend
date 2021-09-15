@@ -12,7 +12,7 @@ export class AllStoriesComponent implements OnInit {
   stysrv: StoryShareService
 
   constructor(storyShareService: StoryShareService, public auth: AuthService) {
-    // Assigns the service as aproperty of the component
+    // Assigns the service as a property of the component
     this.stysrv = storyShareService
   }
 
